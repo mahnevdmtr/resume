@@ -4,74 +4,104 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="dmitriy, cv, resume">
-    <meta name="description" content="Это сайт - резюме Дмитрия Махнева">
+    <meta name="description" content="Это сайт — резюме Дмитрия Махнева">
+    <link rel="stylesheet" href="style.css">
+
     <title>Dmitriy Resume</title>
 </head>
 <body>
-    <img src="photo.jpg" alt="" width="250">
 
-    <h1>Дмитрий Махнев</h1>
-    <p>Работаю на <strong>оборонном предприятии.</strong></p>
-    <p>Учусь на фронтенд-разработчика.</p>
-    <p>Люблю <em>кино, игры.</em></p>
-    <h4><strong>Список социальных сетей:</strong></h4>
+    <div class="container">
+        <div class="info">
+            <img src="photo.jpg" alt="" class="avatar">
+            <div class="info-text">
+                <h1>Дмитрий Махнев</h1>
 
-    <a href="https://vk.com/stereomah" target="_blank">VK </a>
-    |
-    <a href="https://t.me/@Dddmitriyy" target="_blank">Telegram</a>
+                <p>Работаю на <strong>оборонном предприятии.</strong></p>
+                <p>Учусь на фронтенд — разработчика.</p>
+                <p>Люблю <em>кино, игры.</em></p>
+                <h4><strong>Список социальных сетей:</strong></h4>
 
-    <h2>Мои хобби</h2>
-    <ol>
-        <li>Кино</li>
-        <li>Путешествия</li>
-        <li>Видеоигры</li>
-        <li>LEGO</li>
-    </ol>
-
-    <h2>Опыт работы</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Название</th>
-                <th>Должность</th>
-                <th>Год</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>АРМИЯ</td>
-                <td>Рядовой</td>
-                <td>2015-2016</td>
-            </tr>
-            <tr>
-                <td>НИТЕЛ</td>
-                <td>Слесарь-Механик</td>
-                <td>2017-сейчас</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Связаться со мной</h2>
-    <form action="/">
-        <div>
-            <label for="name">Ваше имя:</label>
-            <input type="text" id="name" placeholder ="Введите имя">
+                <a href="https://vk.com/stereomah" target="_blank">VK </a>
+                |
+                <a href="https://t.me/@Dddmitriyy" target="_blank">Telegram</a>
+            </div>
         </div>
 
-        <div>
-            <label for="email">Ваш email:</label>
-            <input type="email" id="email" placeholder="Введите email">
+        <div class="card bg-green">
+            <h2>Мои хобби</h2>
+            <ol class="list">
+                <li>Кино</li>
+                <li>Путешествия</li>
+                <li>Видеоигры</li>
+                <li>LEGO</li>
+            </ol>
+        </div>
+        <div class="card bg-red">
+            <h2>Опыт работы</h2>
+            <table class="table">
+                <!-- <thead>
+                    <tr>
+                        <th>Название</th>
+                        <th>Должность</th>
+                        <th>Год</th>
+                    </tr>
+                </thead> -->
+
+                <tbody>
+                    <tr>
+                        <td>Армия</td>
+                        <td>Рядовой</td>
+                        <td>2015 — 2016</td>
+                    </tr>
+                    <tr>
+                        <td>ПАО Нител</td>
+                        <td>Слесарь — механик по радиоэлектронной аппаратуре</td>
+                        <td>2017 — сейчас</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
 
-        <div>
-            <label for="message">Ваше сообщение:</label>
-            <br>
-            <textarea id="message" cols="20" rows="5" placeholder="Введите сообщение..."></textarea>
+        <div class="card bg-yellow">
+            <h2>Мои курсы</h2>
+
+            <ul class="link-list">
+                <li>
+                    <a href="https://stepik.org/course/134850/syllabus">
+                    JavaScript базовый уровень</a>
+                </li>
+
+                <li>
+                    <a href="https://stepik.org/users/241230599/profile">
+                    Все курсы</a>
+                </li>
+            </ul>
         </div>
-        <button type="submit">Отправить!</button>
-    </form>
 
+        
+        <form action="/" class="form">
+            <h2>Связаться со мной</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="name">Ваше имя:</label>
+                    <input type="text" id="name" placeholder ="Введите имя">
+                </div>
 
+                <div class="form-group">
+                    <label for="email">Ваш email:</label>
+                    <input type="email" id="email" placeholder="Введите email">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Ваше сообщение:</label>
+                <br>
+                <textarea id="message" cols="20" rows="5" placeholder="Введите сообщение..."></textarea>
+            </div>
+            <button class="btn" type="submit">Отправить!</button>
+        </form>
+
+    </div>
 </body>
 </html>
